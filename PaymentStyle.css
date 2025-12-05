@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#checkout-details {
+    padding-top: 20px !important;
+}
+
+/* BILLING DETAILS FORM */
+.billing-form {
+    width: 60%;
+    
+}
+
+/* BILLING FORM HEADINGS */
+.billing-form h3 {
+    margin-bottom: 20px;
+    font-size: 200%;
+    margin-left: 1%;
+}
+/* BILLING FORM */
+.billing-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1.5%;
+}
+/* INPUT FIELD GROUPS */
+.input-group {
+    width: 48%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+/* FULL WIDTH INPUTS */
+.input-group.full-width {
+    width: 100%;
+}
+/* INPUT LABELS AND FIELDS */
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #465b52;
+}
+/* INPUT FIELDS, TEXTAREAS, SELECTS */
+.input-group input,
+.input-group textarea,
+.input-group select { 
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff; 
+    cursor: pointer;
+}
+/* DISABLED SELECT FIELD (BARANGAY FIELD) */
+.input-group select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 100px;
+}
+/* ORDER SUMMARY BOX */
+.order-summary-box {
+    width: 35%;
+    padding: 30px;
+    border: 1px solid #fff;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    height: fit-content;
+    margin-right: 1.5%;
+    margin-top: 0%;
+}
+/* ORDER SUMMARY HEADING */
+.order-summary-box h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+/* ORDERED PRODUCTS LIST */
+.order-products {
+    margin-bottom: 20px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+/* INDIVIDUAL ORDER ITEM */
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 300;
+}
+/* ORDER TOTAL SECTION */
+.order-total {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+/* TOTAL ROWS */
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+/* FINAL TOTAL ROW */
+.total-row.final-total {
+    font-size: 18px;
+    color: #000;
+    margin-top: 10px;
+    border-top: 2px solid #e1e1e1;
+    padding-top: 10px;
+}
+/* PAYMENT METHOD SECTION */
+.payment-method h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border: none;
+}
+/* PAYMENT OPTIONS */
+.payment-option {
+    margin-bottom: 10px;
+}
+/* PAYMENT OPTION LABELS */
+.payment-option label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+    cursor: pointer;
+}
+/* PAYMENT LOGOS */
+.payment-logos {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+}
+/* CARD DETAILS BOX */
+.card-details-box {
+    display: none;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+/* SHOW CARD DETAILS WHEN ACTIVE */
+.card-details-box.active {
+    display: block;
+}
+
+.place-order-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+/* PLACE ORDER BUTTON */
+button.place-order-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    background: #01082d;
+    border: none;
+    color: #fff;
+    font-size: 1.15em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    margin-top: 10px;
+}
+
+/* PLACE ORDER BUTTON HOVER */
+button.place-order-btn:hover {
+    background-color: #2520b6;
+    color: #fff;
+    cursor: pointer;
+}
+/* CONFIRMATION OVERLAY */
+.confirmation-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.07);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+/* CONFIRMATION CONTENT */ 
+.confirmation-content {
+    background-color: #01082d;
+    border: 2px solid #f0f0f0;
+    padding: 40px 50px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    color: #fff;
+}
+/* BLUR EFFECT WHEN OVERLAY IS ACTIVE */
+body.blur-active > *:not(.confirmation-overlay) {
+    filter: blur(3px);
+    opacity: 1; 
+    pointer-events: none;
+    user-select: none; 
+    transition: all 0.3s ease;
+}
+
+body.blur-active {
+    overflow: hidden;
+}
+/* CONFIRMATION CONTENT HEADING */
+.confirmation-content h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+/* CONFIRMATION MESSAGE */
+.confirmation-message {
+    font-size: 16px;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+/* CONFIRMATION REFERENCE NUMBER */
+.confirmation-ref {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 100;
+}
+/* CONFIRMATION BUTTON */
+.confirmation-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 10px;
+    background: #fff;
+    border: none;
+    color: #01082d;
+    font-size: 1.15em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    margin-top: 10px;
+}
+/* CONFIRMATION BUTTON HOVER */
+.confirmation-btn:hover {
+    background-color: #e0e0eb;
+}
+
+/* ERROR MESSAGE STYLES */
+.error-msg {
+    color: #ff4747;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+/* SHOW ERROR MESSAGE */
+.input-group.error .error-msg {
+    display: block;
+}
+
+.input-group.error input,
+.input-group.error select {
+    border: 1px solid #ff4747;
+}
+
+.input-group.success input,
+.input-group.success select {
+    border: 1px solid #2ed573;
+}
