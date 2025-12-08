@@ -1,0 +1,274 @@
+/* GENERAL */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #111;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  color: #0078ff;
+  margin-bottom: 15px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #b9d3f2;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  transition: padding 0.3s ease, background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+header.shrink {
+  padding: 5px 40px;
+  background-color: #93c1f0;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  display: block;
+  transition: width 0.3s ease;
+}
+
+header.shrink .logo img {
+  width: 60px;
+}
+
+.nav-and-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #0078ff;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icons a {
+  color: #111;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-icons a:hover {
+  transform: scale(1.2);
+}
+
+.header-icons a:hover i.fa-bag-shopping {
+  color: #ff7f00;
+}
+
+.header-icons a:hover i.fa-user {
+  color: #0078ff;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 35px 0 10px 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background-color: #e0e7ff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 30px;
+  color: #444;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  user-select: none;
+  scroll-margin-top: 80px;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: #0078ff;
+  color: #fff;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1000px;
+  margin: 40px auto 60px auto;
+  padding: 0 25px;
+  line-height: 1.6;
+  scroll-margin-top: 90px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #b9d3f2;
+  color: #111;
+  padding: 20px 40px;
+  font-size: 13px;
+  user-select: none;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-left p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+  min-width: 220px;
+  flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-account a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.footer-links a:hover,
+.footer-account a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  margin-top: 8px;
+}
+
+.social a {
+  color: #111;
+  margin-right: 12px;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.social a:hover {
+  transform: scale(1.2);
+}
+
+.social a:hover i.facebook {
+  color: #1877f2;
+}
+
+.social a:hover i.twitter {
+  color: #1da1f2;
+}
+
+.social a:hover i.instagram {
+  color: #c32aa3;
+}
+
+.social a:hover i.youtube {
+  color: #ff0000;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #7f9edc;
+  margin: 18px auto;
+  max-width: 1400px;
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  color: #222;
+  padding-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-and-icons {
+    gap: 15px;
+  }
+
+  .nav-menu ul {
+    gap: 12px;
+  }
+
+  .footer-right {
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .tabs {
+    gap: 8px;
+  }
+
+  .tab-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
